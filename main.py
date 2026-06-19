@@ -1,3 +1,5 @@
+from os import kill
+
 import pygame
 import sys
 
@@ -54,6 +56,14 @@ def main():
                 log_event("player_hit")
                 print(f"Game Over !")
                 sys.exit()
+        
+        for a in asteroids:
+            for s in shots:
+                if s.collides_with(a):
+                    log_event("asteroid_shot")
+                    s.kill()
+                    a.kill()
+
 
 if __name__ == "__main__":
     main()
