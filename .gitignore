@@ -13,3 +13,4 @@ wheels/
 
 # Game generated files
 game_state.jsonl
+game_events.jsonl
