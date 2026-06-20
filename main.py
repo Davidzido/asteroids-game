@@ -1,5 +1,3 @@
-from os import kill
-
 import pygame
 import sys
 
@@ -33,7 +31,7 @@ def main():
 
     Player.containers = (updatable, drawable)
 
-    player: Player = Player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
+    player: Player = Player(int(SCREEN_WIDTH/2), int(SCREEN_HEIGHT/2))
     dt: float = 0.0
 
     while True:
